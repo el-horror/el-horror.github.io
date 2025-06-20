@@ -1,25 +1,35 @@
+# Сохраняем HTML-файл с оформлением в стиле VHS-хоррора
+
+html_content = """
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>el.horror1 — ссылки</title>
+  <title>obscurus приветствует Вас./title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
     body {
-      background-color: #0a0a0a;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #39ff14;
+      font-family: 'Orbitron', monospace;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       padding: 40px 20px;
       min-height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://i.imgur.com/X1xPhhW.gif');
+      background-size: cover;
+      background-position: center;
+      text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
     }
     h1 {
       margin-bottom: 20px;
-      font-size: 28px;
-      color: #e94e77;
+      font-size: 32px;
+      color: #ff004f;
+      text-shadow: 0 0 5px #ff004f, 0 0 10px #ff004f;
     }
     p {
       font-size: 16px;
@@ -29,8 +39,8 @@
     }
     a.button {
       display: block;
-      background-color: #1e1e1e;
-      color: #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #39ff14;
       text-decoration: none;
       padding: 14px 24px;
       margin: 10px 0;
@@ -40,11 +50,11 @@
       max-width: 300px;
       text-align: center;
       transition: 0.3s;
-      border: 1px solid #444;
+      border: 1px solid #39ff14;
     }
     a.button:hover {
-      background-color: #333;
-      border-color: #e94e77;
+      background-color: rgba(57, 255, 20, 0.1);
+      border-color: #ff004f;
     }
     .note {
       font-size: 13px;
@@ -55,13 +65,21 @@
   </style>
 </head>
 <body>
-  <h1>Добро пожаловать!</h1>
-  <p>Здесь ты найдёшь все ссылки на мои платформы. Поддержи и подпишись!</p>
+  <h1>СТРАШНЫЕ ССЫЛКИ</h1>
+  <p>Здесь ты найдёшь всё... если осмелишься 👁</p>
 
-  <a class="button" href="https://www.youtube.com/@el.horror1YT" target="_blank">📺 Смотри на YouTube</a>
-  <a class="button" href="t.me/elhorror1" target="_blank">💬 Telegram-канал</a>
-  <a class="button" href="https://www.donationalerts.com/r/obscurus" target="_blank">❤️ Поддержать через DonationAlerts</a>
+  <a class="button" href="https://www.youtube.com/@el.horror1YT" target="_blank">📺 Смотреть на YouTube</a>
+  <a class="button" href="https://t.me/elhorror1" target="_blank">💬 Telegram-канал</a>
+  <a class="button" href="https://www.donationalerts.com/r/obscurus" target="_blank">💀 Поддержать через DonationAlerts</a>
 
-  <p class="note">Нажми три точки → «Открыть в браузере», если ссылки не работают.</p>
+  <p class="note">🕷 Нажми три точки → «Открыть в браузере», если ссылки не работают</p>
 </body>
 </html>
+"""
+
+# Сохраняем в файл
+file_path = "/mnt/data/index_vhs_horror.html"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+file_path
